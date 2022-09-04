@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace introduction_to_oop_project
 {
-    public abstract class Bird
+    public abstract class Bird : IDance
     {
         public string Name { get; private set; }
         public string Color { get; private set; }
@@ -18,13 +18,25 @@ namespace introduction_to_oop_project
         }
 
         public abstract void Speak();
-        //{
-        //    Console.WriteLine($"My name is {Name} and I am a {Color} bird.");
-        //}
 
         public virtual void Fly()
         {
-            Console.WriteLine("Hi there! I can fly.");// $"I'm {Name} and I can fly high in the blue sky!");
+            Console.WriteLine("Hi there! I can fly.");
+        }
+
+        public void Spin()
+        {
+            Console.WriteLine($"{Name} spin!");
+        }
+
+        public void DoTheCaterpillar()
+        {
+            Console.WriteLine($"{Name} do the wriggly woo!");
+        }
+
+        public void Jump()
+        {
+            Console.WriteLine($"{Name} jump in the air!");
         }
     }
 }
